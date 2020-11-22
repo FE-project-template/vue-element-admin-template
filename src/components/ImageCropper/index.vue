@@ -19,16 +19,16 @@
             <i class="vicp-icon1-body" />
             <i class="vicp-icon1-bottom" />
           </i>
-          <span v-show="loading !== 1" class="vicp-hint">{{ lang.hint }}</span>
-          <span v-show="!isSupported" class="vicp-no-supported-hint">{{ lang.noSupported }}</span>
+          <span v-show="loading !== 1" class="vicp-hint">\{{ lang.hint }}</span>
+          <span v-show="!isSupported" class="vicp-no-supported-hint">\{{ lang.noSupported }}</span>
           <input v-show="false" v-if="step == 1" ref="fileinput" type="file" @change="handleChange">
         </div>
         <div v-show="hasError" class="vicp-error">
           <i class="vicp-icon2" />
-          {{ errorMsg }}
+          \{{ errorMsg }}
         </div>
         <div class="vicp-operate">
-          <a @click="off" @mousedown="ripple">{{ lang.btn.off }}</a>
+          <a @click="off" @mousedown="ripple">\{{ lang.btn.off }}</a>
         </div>
       </div>
 
@@ -94,39 +94,39 @@
             <div class="vicp-preview">
               <div v-if="!noSquare" class="vicp-preview-item">
                 <img :src="createImgUrl" :style="previewStyle">
-                <span>{{ lang.preview }}</span>
+                <span>\{{ lang.preview }}</span>
               </div>
               <div v-if="!noCircle" class="vicp-preview-item vicp-preview-item-circle">
                 <img :src="createImgUrl" :style="previewStyle">
-                <span>{{ lang.preview }}</span>
+                <span>\{{ lang.preview }}</span>
               </div>
             </div>
           </div>
         </div>
         <div class="vicp-operate">
-          <a @click="setStep(1)" @mousedown="ripple">{{ lang.btn.back }}</a>
-          <a class="vicp-operate-btn" @click="prepareUpload" @mousedown="ripple">{{ lang.btn.save }}</a>
+          <a @click="setStep(1)" @mousedown="ripple">\{{ lang.btn.back }}</a>
+          <a class="vicp-operate-btn" @click="prepareUpload" @mousedown="ripple">\{{ lang.btn.save }}</a>
         </div>
       </div>
 
       <div v-if="step == 3" class="vicp-step3">
         <div class="vicp-upload">
-          <span v-show="loading === 1" class="vicp-loading">{{ lang.loading }}</span>
+          <span v-show="loading === 1" class="vicp-loading">\{{ lang.loading }}</span>
           <div class="vicp-progress-wrap">
             <span v-show="loading === 1" :style="progressStyle" class="vicp-progress" />
           </div>
           <div v-show="hasError" class="vicp-error">
             <i class="vicp-icon2" />
-            {{ errorMsg }}
+            \{{ errorMsg }}
           </div>
           <div v-show="loading === 2" class="vicp-success">
             <i class="vicp-icon3" />
-            {{ lang.success }}
+            \{{ lang.success }}
           </div>
         </div>
         <div class="vicp-operate">
-          <a @click="setStep(2)" @mousedown="ripple">{{ lang.btn.back }}</a>
-          <a @click="off" @mousedown="ripple">{{ lang.btn.close }}</a>
+          <a @click="setStep(2)" @mousedown="ripple">\{{ lang.btn.back }}</a>
+          <a @click="off" @mousedown="ripple">\{{ lang.btn.close }}</a>
         </div>
       </div>
       <canvas v-show="false" ref="canvas" :width="width" :height="height" />

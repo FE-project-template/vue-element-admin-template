@@ -10,11 +10,11 @@
           <div v-for="item of svgIcons" :key="item" @click="handleClipboard(generateIconCode(item),$event)">
             <el-tooltip placement="top">
               <div slot="content">
-                {{ generateIconCode(item) }}
+                \{{ generateIconCode(item) }}
               </div>
               <div class="icon-item">
                 <svg-icon :icon-class="item" class-name="disabled" />
-                <span>{{ item }}</span>
+                <span>\{{ item }}</span>
               </div>
             </el-tooltip>
           </div>
@@ -25,11 +25,11 @@
           <div v-for="item of elementIcons" :key="item" @click="handleClipboard(generateElementIconCode(item),$event)">
             <el-tooltip placement="top">
               <div slot="content">
-                {{ generateElementIconCode(item) }}
+                \{{ generateElementIconCode(item) }}
               </div>
               <div class="icon-item">
                 <i :class="'el-icon-' + item" />
-                <span>{{ item }}</span>
+                <span>\{{ item }}</span>
               </div>
             </el-tooltip>
           </div>

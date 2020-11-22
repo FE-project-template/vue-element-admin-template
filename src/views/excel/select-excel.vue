@@ -20,28 +20,28 @@
       <el-table-column type="selection" align="center" />
       <el-table-column align="center" label="Id" width="95">
         <template slot-scope="scope">
-          {{ scope.$index }}
+          \{{ scope.$index }}
         </template>
       </el-table-column>
       <el-table-column label="Title">
         <template slot-scope="scope">
-          {{ scope.row.title }}
+          \{{ scope.row.title }}
         </template>
       </el-table-column>
       <el-table-column label="Author" width="110" align="center">
         <template slot-scope="scope">
-          <el-tag>{{ scope.row.author }}</el-tag>
+          <el-tag>\{{ scope.row.author }}</el-tag>
         </template>
       </el-table-column>
       <el-table-column label="Readings" width="115" align="center">
         <template slot-scope="scope">
-          {{ scope.row.pageviews }}
+          \{{ scope.row.pageviews }}
         </template>
       </el-table-column>
       <el-table-column align="center" label="PDate" width="220">
         <template slot-scope="scope">
           <i class="el-icon-time" />
-          <span>{{ scope.row.display_time }}</span>
+          <span>\{{ scope.row.display_time }}</span>
         </template>
       </el-table-column>
     </el-table>

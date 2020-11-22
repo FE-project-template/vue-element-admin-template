@@ -6,7 +6,7 @@
 
     <div style="margin-top:30px;">
       <el-tag v-for="item of value" :key="item" style="margin-right:15px;">
-        {{ item }}
+        \{{ item }}
       </el-tag>
     </div>
   </div>

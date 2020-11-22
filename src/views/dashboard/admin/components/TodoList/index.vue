@@ -22,12 +22,12 @@
     <!-- footer -->
     <footer v-show="todos.length" class="footer">
       <span class="todo-count">
-        <strong>{{ remaining }}</strong>
-        {{ remaining | pluralize('item') }} left
+        <strong>\{{ remaining }}</strong>
+        \{{ remaining | pluralize('item') }} left
       </span>
       <ul class="filters">
         <li v-for="(val, key) in filters" :key="key">
-          <a :class="{ selected: visibility === key }" @click.prevent="visibility = key">{{ key | capitalize }}</a>
+          <a :class="{ selected: visibility === key }" @click.prevent="visibility = key">\{{ key | capitalize }}</a>
         </li>
       </ul>
       <!-- <button class="clear-completed" v-show="todos.length > remaining" @click="clearCompleted">

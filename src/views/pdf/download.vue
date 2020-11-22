@@ -2,7 +2,7 @@
   <div v-loading.fullscreen.lock="fullscreenLoading" class="main-article" element-loading-text="Efforts to generate PDF">
     <div class="article__heading">
       <div class="article__heading__title">
-        {{ article.title }}
+        \{{ article.title }}
       </div>
     </div>
     <div style="color: #ccc;">

@@ -4,25 +4,25 @@
     <el-table ref="dragTable" v-loading="listLoading" :data="list" row-key="id" border fit highlight-current-row style="width: 100%">
       <el-table-column align="center" label="ID" width="65">
         <template slot-scope="{row}">
-          <span>{{ row.id }}</span>
+          <span>\{{ row.id }}</span>
         </template>
       </el-table-column>
 
       <el-table-column width="180px" align="center" label="Date">
         <template slot-scope="{row}">
-          <span>{{ row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
+          <span>\{{ row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
         </template>
       </el-table-column>
 
       <el-table-column min-width="300px" label="Title">
         <template slot-scope="{row}">
-          <span>{{ row.title }}</span>
+          <span>\{{ row.title }}</span>
         </template>
       </el-table-column>
 
       <el-table-column width="110px" align="center" label="Author">
         <template slot-scope="{row}">
-          <span>{{ row.author }}</span>
+          <span>\{{ row.author }}</span>
         </template>
       </el-table-column>
 
@@ -34,14 +34,14 @@
 
       <el-table-column align="center" label="Readings" width="95">
         <template slot-scope="{row}">
-          <span>{{ row.pageviews }}</span>
+          <span>\{{ row.pageviews }}</span>
         </template>
       </el-table-column>
 
       <el-table-column class-name="status-col" label="Status" width="110">
         <template slot-scope="{row}">
           <el-tag :type="row.status | statusFilter">
-            {{ row.status }}
+            \{{ row.status }}
           </el-tag>
         </template>
       </el-table-column>
@@ -53,10 +53,10 @@
       </el-table-column>
     </el-table>
     <div class="show-d">
-      <el-tag>The default order :</el-tag> {{ oldList }}
+      <el-tag>The default order :</el-tag> \{{ oldList }}
     </div>
     <div class="show-d">
-      <el-tag>The after dragging order :</el-tag> {{ newList }}
+      <el-tag>The after dragging order :</el-tag> \{{ newList }}
     </div>
   </div>
 </template>
